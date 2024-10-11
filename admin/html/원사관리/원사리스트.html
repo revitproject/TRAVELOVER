@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TRAVELOVER ADMIN</title>
+  <link rel="shortcut icon" href="../../resources/images/common/favicon.ico">
+  <!-- css library -->
+  <link rel="stylesheet" href="../../resources/css/lib/tui-date-picker.min.css">
+  <link rel="stylesheet" href="../../resources/css/lib/swiper-bundle.min.css">
+  <!-- css base -->
+  <link rel="stylesheet" href="../../resources/css/base.css">
+</head>
+<body data-route="subscription1">
+  <!-- base-wrap -->
+  <div class="base-wrap subscription">
+    <!-- base-header -->
+    <header class="base-header"></header>
+    <!-- //base-header -->
+
+    <!-- base-aside -->
+    <aside class="base-aside"></aside>
+    <!-- //base-aside -->
+
+    <!-- base-content -->
+    <main class="base-content">
+      <div class="content-inner">
+        <div class="wrap-title is-both">
+          <h1 class="content-title">청약관리</h1>
+          <div class="breadscrumb">
+            <ul>
+              <li><a href="#none">청약</a></li>
+              <li class="is-active"><a href="#none">청약 관리</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="module-top">
+          <div class="wrap-tbl">
+            <table class="tbl-base has-left">
+              <colgroup>
+                <col style="width: 20%;">
+                <col>
+                <col style="width: 20%;">
+                <col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th>원사정보</th>
+                  <td>
+                    <select class="inp-select">
+                      <option value="선택">선택</option>
+                      <option value="select2">셀렉트2</option>
+                      <option value="select3">셀렉트3</option>
+                    </select>
+                  </td>
+                  <th>원사코드</th>
+                  <td>
+                    <label class="lb-inp">
+                      <span class="lb-title hidden">원사코드</span>
+                      <input type="text" class="inp-base" placeholder="">
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <th>국문원사명</th>
+                  <td>
+                    <label class="lb-inp">
+                      <span class="lb-title hidden">국문원사명</span>
+                      <input type="text" class="inp-base" placeholder="">
+                    </label>
+                  </td>
+                  <th>보증보험기간</th>
+                  <td>
+                    <div class="datepicker">
+                      <div class="tui-datepicker-input">
+                        <input type="text" id="startpicker-inp1" aria-label="Date-Time">
+                        <div id="startpicker-div1" class="datepicker-div"></div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="wrap-btn is-center">
+            <button type="button" class="btn is-outline-1">초기화</button>
+            <button type="button" class="btn is-primary">검색</button>
+          </div>
+        </div>
+
+        <div class="module-bottom">
+          <div class="wrap-tbl">
+            <div class="tbl-head">
+              <div class="wrap-count">
+                <span class="count-text">총 <em class="count-number">1,435</em> 건</span>
+              </div>
+              <div class="head-option">
+                <button type="button" class="btn btn-excel">다운로드</button>
+                <select class="inp-select">
+                  <option value="10" selected>10</option>
+                  <option value="30">30</option>
+                  <option value="50">50</option>
+                  <option value="100">100</option>
+                </select>
+              </div>
+            </div>
+
+            <table class="tbl-base">
+              <colgroup>
+                <col style="width: 6rem;">
+                <col>
+                <col>
+                <col>
+                <col>
+                <col>
+                <col style="width: 16rem;">
+                <col style="width: 20rem;">
+                <col style="width: 10rem;">
+                <col style="width: 10rem;">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>번호</th>
+                  <th>원사상태</th>
+                  <th>국문원사명</th>
+                  <th>영문원사명</th>
+                  <th>원사코드</th>
+                  <th>대표자명</th>
+                  <th>사업자등록번호</th>
+                  <th>보증보험 기간</th>
+                  <th>메모</th>
+                  <th>상세</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>20</td>
+                  <td>판매중</td>
+                  <td>악사</td>
+                  <td>AXA</td>
+                  <td>AX</td>
+                  <td>홍길동</td>
+                  <td>123-45-67890</td>
+                  <td>2024-10-01 ~ 2025-11-01</td>
+                  <td><button type="button" class="btn is-outline-1 is-xs">확인</button></td>
+                  <td><button type="button" class="btn is-outline-2 is-xs">이동</button></td>
+                </tr>
+                <tr>
+                  <td>20</td>
+                  <td>판매중</td>
+                  <td>악사</td>
+                  <td>AXA</td>
+                  <td>AX</td>
+                  <td>홍길동</td>
+                  <td>123-45-67890</td>
+                  <td>2024-10-01 ~ 2025-11-01</td>
+                  <td><button type="button" class="btn is-outline-1 is-xs">확인</button></td>
+                  <td><button type="button" class="btn is-outline-2 is-xs">이동</button></td>
+                </tr>
+                <tr>
+                  <td>20</td>
+                  <td>판매중</td>
+                  <td>악사</td>
+                  <td>AXA</td>
+                  <td>AX</td>
+                  <td>홍길동</td>
+                  <td>123-45-67890</td>
+                  <td>2024-10-01 ~ 2025-11-01</td>
+                  <td><button type="button" class="btn is-outline-1 is-xs">확인</button></td>
+                  <td><button type="button" class="btn is-outline-2 is-xs">이동</button></td>
+                </tr>
+                <tr>
+                  <td>20</td>
+                  <td>판매중</td>
+                  <td>악사</td>
+                  <td>AXA</td>
+                  <td>AX</td>
+                  <td>홍길동</td>
+                  <td>123-45-67890</td>
+                  <td>2024-10-01 ~ 2025-11-01</td>
+                  <td><button type="button" class="btn is-outline-1 is-xs">확인</button></td>
+                  <td><button type="button" class="btn is-outline-2 is-xs">이동</button></td>
+                </tr>
+                <tr>
+                  <td>20</td>
+                  <td>판매중</td>
+                  <td>악사</td>
+                  <td>AXA</td>
+                  <td>AX</td>
+                  <td>홍길동</td>
+                  <td>123-45-67890</td>
+                  <td>2024-10-01 ~ 2025-11-01</td>
+                  <td><button type="button" class="btn is-outline-1 is-xs">확인</button></td>
+                  <td><button type="button" class="btn is-outline-2 is-xs">이동</button></td>
+                </tr>
+                <tr>
+                  <td>20</td>
+                  <td>판매중</td>
+                  <td>악사</td>
+                  <td>AXA</td>
+                  <td>AX</td>
+                  <td>홍길동</td>
+                  <td>123-45-67890</td>
+                  <td>2024-10-01 ~ 2025-11-01</td>
+                  <td><button type="button" class="btn is-outline-1 is-xs">확인</button></td>
+                  <td><button type="button" class="btn is-outline-2 is-xs">이동</button></td>
+                </tr>
+                <tr>
+                  <td>20</td>
+                  <td>판매중</td>
+                  <td>악사</td>
+                  <td>AXA</td>
+                  <td>AX</td>
+                  <td>홍길동</td>
+                  <td>123-45-67890</td>
+                  <td>2024-10-01 ~ 2025-11-01</td>
+                  <td><button type="button" class="btn is-outline-1 is-xs">확인</button></td>
+                  <td><button type="button" class="btn is-outline-2 is-xs">이동</button></td>
+                </tr>
+                <tr>
+                  <td>20</td>
+                  <td>판매중</td>
+                  <td>악사</td>
+                  <td>AXA</td>
+                  <td>AX</td>
+                  <td>홍길동</td>
+                  <td>123-45-67890</td>
+                  <td>2024-10-01 ~ 2025-11-01</td>
+                  <td><button type="button" class="btn is-outline-1 is-xs">확인</button></td>
+                  <td><button type="button" class="btn is-outline-2 is-xs">이동</button></td>
+                </tr>
+
+                <!-- 데이터 없는 CASE : 'no-result' 클래스 추가 -->
+                <!-- <tr>
+                  <td colspan="10" class="no-result">검색 결과가 없습니다.</td>
+                </tr> -->
+              </tbody>
+            </table>
+
+            <div class="wrap-pagination">
+              <div class="pagination">
+                <a href="#" class="pagination-link is-first"><span class="hidden">첫 페이지로 이동</span></a>
+                <a href="#" class="pagination-link is-prev"><span class="hidden">이전 페이지로 이동</span></a>
+                <a href="#" class="pagination-link is-current">1</a> <!-- 현재 페이지 -->
+                <a href="#" class="pagination-link">2</a>
+                <a href="#" class="pagination-link">3</a>
+                <a href="#" class="pagination-link">4</a>
+                <a href="#" class="pagination-link">5</a>
+                <a href="#" class="pagination-link">6</a>
+                <a href="#" class="pagination-link">7</a>
+                <a href="#" class="pagination-link">8</a>
+                <a href="#" class="pagination-link">9</a>
+                <a href="#" class="pagination-link">10</a>
+                <a href="#" class="pagination-link is-next"><span class="hidden">다음 페이지 이동</span></a>
+                <a href="#" class="pagination-link is-last"><span class="hidden">마지막 페이지로 이동</span></a>
+              </div>
+            </div>
+
+            <div class="wrap-btn is-end">
+              <button type="button" class="btn is-primary">원사등록</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- //base-content -->
+  </div>
+  <!-- //base-wrap -->
+  <!-- js library -->
+  <script src="../../resources/js/jquery/jquery.min.js"></script>
+  <script src="../../resources/js/lib/swiper-bundle.min.js"></script>
+  <script src="../../resources/js/lib/tui-date-picker.min.js"></script>
+  <!-- js base -->
+  <script type="module" src="../../resources/js/common/ui.common.js"></script>
+
+  <!-- page script -->
+  <script>
+    // DatePicker
+    const today = new Date();
+    const startpicker = new tui.DatePicker('#startpicker-div1', {
+      date: today,
+      language: 'ko',
+      input: {
+        element: '#startpicker-inp1',
+        format: 'yyyy-MM-dd'
+      }
+    });
+    const endpicker = new tui.DatePicker('#endpicker-div1', {
+      date: today,
+      language: 'ko',
+      input: {
+        element: '#endpicker-inp1',
+        format: 'yyyy-MM-dd'
+      }
+    });
+
+    // 데이트피커 옵션 버튼 UI 확인용 스크립트
+    document.querySelector('.btn-options').addEventListener('click', function (event) {
+      const target = event.target;
+      if (!target.classList.contains('btn')) return;
+
+      let startDate, endDate = today;
+      switch (target.textContent.trim()) {
+        case '전체':
+          break;
+        case '오늘':
+          startDate = endDate = today;
+          break;
+        case '1주일':
+          startDate = new Date(today.getFullYear(), today.getMonth(), today.getDate() - 7);
+          break;
+        case '1개월':
+          startDate = new Date(today.getFullYear(), today.getMonth() - 1, today.getDate());
+          break;
+        case '3개월':
+          startDate = new Date(today.getFullYear(), today.getMonth() - 3, today.getDate());
+          break;
+        case '6개월':
+          startDate = new Date(today.getFullYear(), today.getMonth() - 6, today.getDate());
+          break;
+      }
+
+      startpicker.setDate(startDate);
+      endpicker.setDate(endDate);
+    });
+  </script>
+
+  <!-- alert/confirm -->
+  <script>
+    const alertBtns = document.querySelectorAll('#btnDelete1, #btnDelete2');
+    
+    alertBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        window.modalManager.confirm(
+          '기기를 정말 삭제 하시겠습니까?',  // 타이틀
+          null,                           // 메시지
+          () => { window.modalManager.hideDialog() },  // 취소 버튼 콜백
+          () => { console.log('기기를 삭제했습니다.'); },   // 확인 버튼 콜백
+          '취소',  // 취소 버튼 텍스트
+          '확인'   // 확인 버튼 텍스트
+        )
+      })
+    })
+  </script>
+</body> 
+</html>

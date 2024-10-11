@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+/* default */
+::-webkit-scrollbar,
+::-webkit-scrollbar-thumb {border-radius: .3rem;}
+::-webkit-scrollbar {width: .3rem; height: .3rem; background-color: var(--grays-1);}
+::-webkit-scrollbar-thumb {background-color: var(--primary);}
+
+/* lnb */
+.lnb::-webkit-scrollbar,
+.lnb::-webkit-scrollbar-thumb {border-radius: .3rem;}
+.lnb::-webkit-scrollbar {width: .3rem; height: .3rem; background-color: var(--primary-2);}
+.lnb::-webkit-scrollbar-thumb {background-color: rgba(255, 255, 255, 0.1);}
+
+/* scroll-content */
+.scroll-content::-webkit-scrollbar,
+.scroll-content::-webkit-scrollbar-thumb {border-radius: .3rem;}
+.scroll-content::-webkit-scrollbar {width: .3rem; height: .3rem;  background-color: var(--grays-1);}
+.scroll-content::-webkit-scrollbar-thumb {background-color: var(--primary);}
+
+/* modal */
+.has-scrollbar::-webkit-scrollbar,
+.has-scrollbar::-webkit-scrollbar-thumb {border-radius: .3rem;}
+.has-scrollbar::-webkit-scrollbar {width: .3rem; height: .3rem; background-color: var(--grays-1);}
+.has-scrollbar::-webkit-scrollbar-thumb {background-color: var(--primary);}
+
+/* textarea */
+.inp-textarea::-webkit-scrollbar,
+.inp-textarea::-webkit-scrollbar-thumb {border-radius: 1rem;}
+.inp-textarea::-webkit-scrollbar {width: 1.2rem; background-color: transparent;}
+.inp-textarea::-webkit-scrollbar-thumb {background-clip: padding-box; border: .3rem solid transparent; background-color: var(--grays-3);}

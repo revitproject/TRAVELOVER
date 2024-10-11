@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TRAVELOVER GUIDE</title>
+  <link rel="shortcut icon" href="../../resources/images/common/favicon.ico">
+  <!-- css library -->
+  <link rel="stylesheet" href="../../resources/css/lib/tui-date-picker.min.css">
+  <link rel="stylesheet" href="../../resources/css/lib/prism.css">
+  <!-- css base -->
+  <link rel="stylesheet" href="../../resources/css/base.css">
+</head>
+<body data-route="forms"> 
+  <!-- base-wrap -->
+  <div class="base-wrap component">
+    <!-- base-header -->
+    <header class="base-header"></header>
+    <!-- //base-header -->
+     
+    <!-- base-aside -->
+    <aside class="base-aside guide"></aside>
+    <!-- //base-aside -->
+
+    <!-- content -->
+    <main class="base-content">
+      <h1 class="component-h1">Forms</h1>
+      <h2 class="component-title">Checkbox</h2>
+      <div class="wrap-group">
+        <div class="form-checkbox">
+          <label class="lb-checkbox"><input type="checkbox" class="inp-checkbox">default</label>
+          <label class="lb-checkbox"><input type="checkbox" class="inp-checkbox" checked>checked</label>
+          <label class="lb-checkbox is-disabled"><input type="checkbox" class="inp-checkbox" disabled>disabled</label>
+          <label class="lb-checkbox is-disabled"><input type="checkbox" class="inp-checkbox" checked disabled>disabled(checked)</label>
+        </div>
+      </div>
+<pre>
+<code class="language-Markup">&lt;div class="form-checkbox">
+  &lt;label class="lb-checkbox">&lt;input type="checkbox" class="inp-checkbox">default&lt;/label>
+  &lt;label class="lb-checkbox">&lt;input type="checkbox" class="inp-checkbox" checked>checked&lt;/label>
+  &lt;label class="lb-checkbox is-disabled">&lt;input type="checkbox" class="inp-checkbox" disabled>disabled&lt;/label>
+  &lt;label class="lb-checkbox is-disabled">&lt;input type="checkbox" class="inp-checkbox" checked disabled>disabled(checked)&lt;/label>
+&lt;/div></code>
+</pre>
+<!-- //checkbox -->
+
+<h2 class="component-title">Radio</h2>
+<div class="wrap-group">
+  <div class="form-radio">
+    <label class="lb-radio"><input type="radio" name="rdoGroup" class="inp-radio">default</label>
+    <label class="lb-radio"><input type="radio" name="rdoGroup" class="inp-radio" checked>checked</label>
+    <label class="lb-radio is-disabled"><input type="radio" name="rdoGroup" class="inp-radio" disabled>disabled</label>
+    <label class="lb-radio is-disabled"><input type="radio" name="rdoGroup2" class="inp-radio" checked disabled>disabled(checked)</label>
+  </div>
+</div>
+<pre>
+<code class="language-Markup">&lt;div class="form-radio">
+  &lt;label class="lb-radio">&lt;input type="radio" name="rdoGroup" class="inp-radio">default&lt;/label>
+  &lt;label class="lb-radio">&lt;input type="radio" name="rdoGroup" class="inp-radio" checked>checked&lt;/label>
+  &lt;label class="lb-radio is-disabled">&lt;input type="radio" name="rdoGroup" class="inp-radio" disabled>disabled&lt;/label>
+  &lt;label class="lb-radio is-disabled">&lt;input type="radio" name="rdoGroup2" class="inp-radio" checked disabled>disabled(checked)&lt;/label>
+&lt;/div></code>
+</pre>
+<!-- // radio -->
+
+<h2 class="component-title">Switch(Checkbox)</h2>
+<div class="form-switch">
+  <label class="lb-switch"><input type="checkbox" class="inp-switch">&nbsp;default</label>
+  <label class="lb-switch"><input type="checkbox" class="inp-switch" checked>&nbsp;checked</label>
+  <label class="lb-switch is-disabled"><input type="checkbox" class="inp-switch" disabled>&nbsp;disabled</label>
+  <label class="lb-switch is-disabled"><input type="checkbox" class="inp-switch" checked disabled>&nbsp;disabled(checked)</label>
+</div>
+
+<pre>
+<code class="language-Markup">&lt;div class="form-switch">
+  &lt;label class="lb-switch">&lt;input type="checkbox" class="inp-switch">&nbsp;default&lt;/label>
+  &lt;label class="lb-switch">&lt;input type="checkbox" class="inp-switch" checked>&nbsp;checked&lt;/label>
+  &lt;label class="lb-switch is-disabled">&lt;input type="checkbox" class="inp-switch" disabled>&nbsp;disabled&lt;/label>
+  &lt;label class="lb-switch is-disabled">&lt;input type="checkbox" class="inp-switch" checked disabled>&nbsp;disabled(checked)&lt;/label>
+&lt;/div></code>
+</pre>
+
+<h2 class="component-title">Switch Text(Checkbox)</h2>
+<div class="form-switch">
+  <label class="lb-switch is-text"><input type="checkbox" class="inp-switch"><span class="false">OFF</span><span class="true">ON</span></label>
+  <label class="lb-switch is-text"><input type="checkbox" class="inp-switch" checked><span class="false">OFF</span><span class="true">ON</span></label>
+  <label class="lb-switch is-text"><input type="checkbox" class="inp-switch" disabled><span class="false">OFF</span><span class="true">ON</span></label>
+  <label class="lb-switch is-text"><input type="checkbox" class="inp-switch" checked disabled><span class="false">OFF</span><span class="true">ON</span></label>
+</div>
+
+<pre>
+<code class="language-Markup">&lt;div class="form-switch">
+  &lt;label class="lb-switch is-text">&lt;input type="checkbox" class="inp-switch">&lt;span class="false">OFF&lt;/span>&lt;span class="true">ON&lt;/span>&lt;/label>
+  &lt;label class="lb-switch is-text">&lt;input type="checkbox" class="inp-switch" checked>&lt;span class="false">OFF&lt;/span>&lt;span class="true">ON&lt;/span>&lt;/label>
+  &lt;label class="lb-switch is-text">&lt;input type="checkbox" class="inp-switch" disabled>&lt;span class="false">OFF&lt;/span>&lt;span class="true">ON&lt;/span>&lt;/label>
+  &lt;label class="lb-switch is-text">&lt;input type="checkbox" class="inp-switch" checked disabled>&lt;span class="false">OFF&lt;/span>&lt;span class="true">ON&lt;/span>&lt;/label>
+&lt;/div></code>
+</pre>
+<!-- //toggle -->
+
+  <h2 class="component-title">Input Text</h2>
+    <!-- default -->
+    <div class="form-input">
+      <label class="lb-inp">
+        <span class="lb-title">h56</span>
+        <input type="text" class="inp-base is-h56" name="" aria-label="" placeholder="플레이스홀더">
+      </label>
+    </div>
+    <div class="form-input">
+      <label class="lb-inp">
+        <span class="lb-title">h48</span>
+        <input type="text" class="inp-base is-h48" name="" aria-label="" placeholder="플레이스홀더">
+      </label>
+    </div>
+    <div class="form-input">
+      <label class="lb-inp">
+        <span class="lb-title">default</span>
+        <input type="text" class="inp-base" name="" aria-label="" placeholder="플레이스홀더" value="텍스트텍스트">
+      </label>
+    </div>
+    <!-- is-focused -->
+    <div class="form-input is-focused">
+      <label class="lb-inp is-focused">
+        <span class="lb-title">focused</span>
+        <input type="text" class="inp-base" name="" aria-label="" placeholder="플레이스홀더" value="텍스트텍스트">
+      </label>
+    </div>
+    <!-- is-readonly -->
+    <div class="form-input">
+      <label class="lb-inp is-readonly">
+        <span class="lb-title">readonly</span>
+        <input type="text" class="inp-base" name="" aria-label="" placeholder="플레이스홀더" value="텍스트텍스트" readonly>
+      </label>
+    </div>
+    <!-- is-disabled -->
+    <div class="form-input">
+      <label class="lb-inp is-disabled">
+        <span class="lb-title">disabled</span>
+        <input type="text" class="inp-base" name="" aria-label="" placeholder="플레이스홀더" value="텍스트텍스트" disabled>
+      </label>
+    </div>
+    <!-- is-error -->
+    <div class="form-input form-validation">
+      <label class="lb-inp is-error">
+        <span class="lb-title">error</span>
+        <input type="text" class="inp-base" name="" aria-label="" placeholder="플레이스홀더" value="유효성체크">
+      </label>
+      <p class="validation">validation 문구 노출 영역</p>
+    </div>
+<pre>
+<code class="language-Markup">&lt;!-- default --&gt;
+&lt;div class="form-input">
+  &lt;label class="lb-inp">
+    &lt;span class="lb-title">h56&lt;/span>
+    &lt;input type="text" class="inp-base is-h56" name="" aria-label="" placeholder="플레이스홀더">
+  &lt;/label>
+&lt;/div>
+&lt;div class="form-input">
+  &lt;label class="lb-inp">
+    &lt;span class="lb-title">h48&lt;/span>
+    &lt;input type="text" class="inp-base is-h48" name="" aria-label="" placeholder="플레이스홀더">
+  &lt;/label>
+&lt;/div>
+&lt;div class="form-input">
+  &lt;label class="lb-inp">
+    &lt;span class="lb-title">default&lt;/span>
+    &lt;input type="text" class="inp-base" name="" aria-label="" placeholder="플레이스홀더" value="텍스트텍스트">
+  &lt;/label>
+&lt;/div>
+&lt;!-- is-focused --&gt;
+&lt;div class="form-input is-focused">
+  &lt;label class="lb-inp is-focused">
+    &lt;span class="lb-title">focused&lt;/span>
+    &lt;input type="text" class="inp-base" name="" aria-label="" placeholder="플레이스홀더" value="텍스트텍스트">
+  &lt;/label>
+&lt;/div>
+&lt;!-- is-readonly --&gt;
+&lt;div class="form-input">
+  &lt;label class="lb-inp is-readonly">
+    &lt;span class="lb-title">readonly&lt;/span>
+    &lt;input type="text" class="inp-base" name="" aria-label="" placeholder="플레이스홀더" value="텍스트텍스트" readonly>
+  &lt;/label>
+&lt;/div>
+&lt;!-- is-disabled --&gt;
+&lt;div class="form-input">
+  &lt;label class="lb-inp is-disabled">
+    &lt;span class="lb-title">disabled&lt;/span>
+    &lt;input type="text" class="inp-base" name="" aria-label="" placeholder="플레이스홀더" value="텍스트텍스트" disabled>
+  &lt;/label>
+&lt;/div>
+&lt;!-- is-error --&gt;
+&lt;div class="form-input form-validation">
+  &lt;label class="lb-inp is-error">
+    &lt;span class="lb-title">error&lt;/span>
+    &lt;input type="text" class="inp-base" name="" aria-label="" placeholder="플레이스홀더" value="유효성체크">
+  &lt;/label>
+  &lt;p class="validation">validation 문구 노출 영역&lt;/p>
+&lt;/div></code>
+</pre>
+<!-- // input(text) -->
+
+  <h2 class="component-title">Input Password</h2>
+  <div class="form-input">
+    <label class="lb-inp">
+      <span class="lb-title">default</span>
+      <input type="password" class="inp-base" name="" aria-label="" maxlength="" placeholder="텍스트 입력" value="12345678910">
+    </label>
+  </div>
+  <div class="form-input">
+    <label class="lb-inp is-toggle">
+      <span class="lb-title">toggle</span>
+      <input type="password" class="inp-base" name="" aria-label="" maxlength="" placeholder="텍스트 입력" value="12345678910">
+      <button type="button" class="btn-eye"><span class="hidden">비밀번호 보기</span></button>
+    </label>
+  </div>
+  <div class="form-input">
+    <label class="lb-inp is-checked">
+      <span class="lb-title">checked</span>
+      <input type="password" class="inp-base" name="" aria-label="" maxlength="" placeholder="텍스트 입력" value="12345678910" checked>
+    </label>
+  </div>
+  <div class="form-input">
+    <label class="lb-inp is-readonly">
+      <span class="lb-title">readonly</span>
+      <input type="password" class="inp-base" name="" aria-label="" maxlength="" placeholder="텍스트 입력" value="12345678910" readonly>
+    </label>
+  </div>
+  <div class="form-input">
+    <label class="lb-inp is-disabled">
+      <span class="lb-title">disabled</span>
+      <input type="password" class="inp-base" name="" aria-label="" maxlength="" placeholder="텍스트 입력" value="12345678910" disabled>
+    </label>
+  </div>
+  <div class="form-input form-validation">
+    <label class="lb-inp is-error">
+      <span class="lb-title">error</span>
+      <input type="password" class="inp-base" name="" aria-label="" maxlength="" placeholder="텍스트 입력" value="12345678910">
+    </label>
+    <p class="validation">validation 문구 노출 영역</p>
+  </div>
+<pre>
+<code class="language-Markup">&lt;div class="form-input">
+  &lt;label class="lb-inp">
+    &lt;span class="lb-title">default&lt;/span>
+    &lt;input type="password" class="inp-base" name="" aria-label="" maxlength="" placeholder="텍스트 입력" value="12345678910">
+  &lt;/label>
+&lt;/div>
+&lt;div class="form-input">
+  &lt;label class="lb-inp is-toggle">
+    &lt;span class="lb-title">toggle&lt;/span>
+    &lt;input type="password" class="inp-base" name="" aria-label="" maxlength="" placeholder="텍스트 입력" value="12345678910">
+    &lt;button type="button" class="btn-eye">&lt;span class="hidden">비밀번호 숨기기&lt;/span>&lt;/button>
+  &lt;/label>
+&lt;/div>
+&lt;div class="form-input">
+  &lt;label class="lb-inp is-checked">
+    &lt;span class="lb-title">checked&lt;/span>
+    &lt;input type="password" class="inp-base" name="" aria-label="" maxlength="" placeholder="텍스트 입력" value="12345678910" checked>
+  &lt;/label>
+&lt;/div>
+&lt;div class="form-input">
+  &lt;label class="lb-inp is-readonly">
+    &lt;span class="lb-title">readonly&lt;/span>
+    &lt;input type="password" class="inp-base" name="" aria-label="" maxlength="" placeholder="텍스트 입력" value="12345678910" readonly>
+  &lt;/label>
+&lt;/div>
+&lt;div class="form-input">
+  &lt;label class="lb-inp is-disabled">
+    &lt;span class="lb-title">disabled&lt;/span>
+    &lt;input type="password" class="inp-base" name="" aria-label="" maxlength="" placeholder="텍스트 입력" value="12345678910" disabled>
+  &lt;/label>
+&lt;/div>
+&lt;div class="form-input form-validation">
+  &lt;label class="lb-inp is-error">
+    &lt;span class="lb-title">error&lt;/span>
+    &lt;input type="password" class="inp-base" name="" aria-label="" maxlength="" placeholder="텍스트 입력" value="12345678910">
+  &lt;/label>
+  &lt;p class="validation">validation 문구 노출 영역&lt;/p>
+&lt;/div></code>
+</pre>
+<!-- // input(password) -->
+
+<h2 class="component-title">Input count</h2>
+<div class="ui-counter">
+  <button type="button" class="btn-minus"><span class="hidden">감소</span></button>
+  <input type="number" class="inp-number" value="10" />
+  <button type="button" class="btn-plus"><span class="hidden">증가</span></button>
+</div>
+
+<pre>
+<code class="language-Markup">&lt;div class="ui-counter">
+  &lt;button type="button" class="btn-minus">&lt;span class="hidden">감소&lt;/span>&lt;/button>
+  &lt;input type="number" class="inp-number" value="10" />
+  &lt;button type="button" class="btn-plus">&lt;span class="hidden">증가&lt;/span>&lt;/button>
+&lt;/div>
+
+&lt;div class="ui-counter is-disabled"> &lt;!-- disabled --&gt;
+  &lt;button type="button" class="btn-minus" disabled>&lt;span class="hidden">감소&lt;/span>&lt;/button>
+  &lt;input type="number" class="inp-number" value="10" disabled/>
+  &lt;button type="button" class="btn-plus" disabled>&lt;span class="hidden">증가&lt;/span>&lt;/button>
+&lt;/div></code>
+</pre>
+<!-- //count input -->
+
+<h2 class="component-title">Input search</h2>
+<div class="form-search">
+  <input type="search" class="inp-search" placeholder="기기번호 또는 사용자 검색" />
+  <button type="button" class="btn-search" aria-label="검색어 검색"><span class="hidden">검색</span></button>
+  <button type="button" class="btn-clear" aria-label="검색어 삭제"><span class="hidden">삭제</span></button>
+</div>
+
+<pre>
+<code class="language-Markup">&lt;div class="form-search">
+  &lt;input type="search" class="inp-search" placeholder="기기번호 또는 사용자 검색" />
+  &lt;button type="button" class="btn-search" aria-label="검색어 검색">&lt;span class="hidden">검색&lt;/span>&lt;/button>
+  &lt;button type="button" class="btn-clear" aria-label="검색어 삭제">&lt;span class="hidden">삭제&lt;/span>&lt;/button>
+&lt;/div></code>
+</pre>
+  
+  <h2 class="component-title">Select</h2>
+  <div class="wrap-group select">
+    <select class="inp-select is-h56">
+      <option value="select1">셀렉트1</option>
+      <option value="select2">셀렉트2</option>
+      <option value="select3">셀렉트3</option>
+    </select>
+
+    <select class="inp-select is-h48">
+      <option value="select1">셀렉트1</option>
+      <option value="select2">셀렉트2</option>
+      <option value="select3">셀렉트3</option>
+    </select>
+
+    <select class="inp-select">
+      <option value="select1">셀렉트1</option>
+      <option value="select2">셀렉트2</option>
+      <option value="select3">셀렉트3</option>
+    </select>
+  </div>
+<pre>
+<code class="language-Markup">&lt;select class="inp-select is-h56">
+  &lt;option value="select1">셀렉트1&lt;/option>
+  &lt;option value="select2">셀렉트2&lt;/option>
+  &lt;option value="select3">셀렉트3&lt;/option>
+&lt;/select>
+
+&lt;select class="inp-select is-h48">
+  &lt;option value="select1">셀렉트1&lt;/option>
+  &lt;option value="select2">셀렉트2&lt;/option>
+  &lt;option value="select3">셀렉트3&lt;/option>
+&lt;/select>
+
+&lt;select class="inp-select"> &lt;!-- default --&gt;
+  &lt;option value="select1">셀렉트1&lt;/option>
+  &lt;option value="select2">셀렉트2&lt;/option>
+  &lt;option value="select3">셀렉트3&lt;/option>
+&lt;/select></code>
+</pre>
+<!-- // select -->
+
+<h2 class="component-title">Textarea</h2>
+<div class="wrap-textarea">
+  <textarea class="inp-textarea" placeholder="내용입력"></textarea>
+</div>
+
+<pre><code class="language-Markup">&lt;div class="wrap-textarea">
+  &lt;textarea class="inp-textarea" placeholder="내용입력">&lt;/textarea>
+&lt;/div></code>
+</pre>
+<!-- //textarea -->
+ 
+  <h2 class="component-title">Date</h2>
+  <div class="wrap-group">
+    <div class="area-datepicker">
+      <!-- DatePicker -->
+      <div class="wrap-datepicker">
+        <div class="datepicker">
+          <div class="tui-datepicker-input">
+            <input type="text" id="startpicker-inp1" aria-label="Date-Time">
+            <div id="startpicker-div1" class="datepicker-div"></div>
+          </div>
+        </div>
+        <span class="datepicker-to">~</span>
+        <div class="datepicker">
+          <div class="tui-datepicker-input">
+            <input type="text" id="endpicker-inp1" aria-label="Date-Time">
+            <div id="endpicker-div1" class="datepicker-div"></div>
+          </div>
+        </div>
+      </div>
+      <!-- //DatePicker -->
+      <div class="btn-options">
+        <button type="button" class="btn is-outline-1 is-active">전체</button>
+        <button type="button" class="btn is-outline-1">오늘</button>
+        <button type="button" class="btn is-outline-1">1주일</button>
+        <button type="button" class="btn is-outline-1">1개월</button>
+        <button type="button" class="btn is-outline-1">3개월</button>
+        <button type="button" class="btn is-outline-1">6개월</button>
+      </div>
+    </div>
+  </div>
+<pre>
+<code class="language-Markup">&lt;div class="area-datepicker">
+  &lt;!-- DatePicker --&gt;
+  &lt;div class="wrap-datepicker">
+    &lt;div class="datePicker">
+      &lt;div class="tui-datepicker-input">
+        &lt;input type="text" id="startpicker-inp1" aria-label="Date-Time">
+        &lt;div id="startpicker-div1" class="datepicker-div">&lt;/div>
+      &lt;/div>
+    &lt;/div>
+    &lt;span class="datepicker-to">~&lt;/span>
+    &lt;div class="datePicker">
+      &lt;div class="tui-datepicker-input">
+        &lt;input type="text" id="endpicker-inp1" aria-label="Date-Time">
+        &lt;div id="endpicker-div1" class="datepicker-div">&lt;/div>
+      &lt;/div>
+    &lt;/div>
+  &lt;/div>
+  &lt;!-- //DatePicker --&gt;
+  &lt;div class="btn-options">
+    &lt;button type="button" class="btn is-outline-1 is-active">전체&lt;/button>
+    &lt;button type="button" class="btn is-outline-1">오늘&lt;/button>
+    &lt;button type="button" class="btn is-outline-1">1주일&lt;/button>
+    &lt;button type="button" class="btn is-outline-1">1개월&lt;/button>
+    &lt;button type="button" class="btn is-outline-1">3개월&lt;/button>
+    &lt;button type="button" class="btn is-outline-1">6개월&lt;/button>
+  &lt;/div>
+&lt;/div></code>
+</pre>
+<!-- // datepicker -->
+
+<h2 class="component-title">search formbox</h2>
+<div class="form-searchbox">
+  <dl class="dl-formbox">
+    <div class="dl-form">
+      <!-- dt min-width(글자수)클래스 가이드 length2 | length3 | length4 | length5  -->
+      <dt class="length4"><label for="select1" class="lb-inp">사용 유무</label></dt>
+      <dd>
+        <select id="select1" class="inp-select">
+          <option value="전체" selected>전체</option>
+          <option value="Y">Y</option>
+          <option value="N">N</option>
+        </select>
+      </dd>
+    </div>
+    <div class="dl-form">
+      <dt class="length4"><label for="select2" class="lb-inp">관리모드</label></dt>
+      <dd>
+        <select id="select2" class="inp-select">
+          <option value="전체" selected>전체</option>
+          <option value="프로필">프로필</option>
+          <option value="디바이스">디바이스</option>
+          <option value="불특정 허용">불특정 허용</option>
+        </select>
+      </dd>
+    </div>
+    <div class="dl-form">
+      <dt class="length4"><label for="select3" class="lb-inp">정책</label></dt>
+      <dd>
+        <select id="select3" class="inp-select">
+          <option value="전체" selected>전체</option>
+          <option value="정책리스트">등록된 정책 리스트01</option>
+          <option value="정책리스트">등록된 정책 리스트02</option>
+        </select>
+      </dd>
+    </div>
+  </dl>
+  <dl class="dl-formbox has-search">
+    <dt class="length4"><label for="select4" class="lb-inp">검색</label></dt>
+    <dd class="is-grow">
+      <select id="select4" class="inp-select is-sm">
+        <option value="전체" selected>전체</option>
+        <option value="모델">모델</option>
+        <option value="사용자">사용자</option>
+      </select>
+      <div class="form-input">
+        <label class="lb-inp">
+          <span class="lb-title hidden">모델 또는 사용자</span>
+          <input type="text" class="inp-base" name="" aria-label="모델 또는 사용자" placeholder="기기번호 또는 사용자 검색">
+        </label>
+      </div>
+      <button type="button" class="btn is-primary is-h36">검색</button>
+    </dd>
+  </dl>
+</div>
+<pre>
+<code class="language-Markup">&lt;div class="form-searchbox">
+  &lt;dl class="dl-formbox">
+    &lt;div class="dl-form">
+      &lt;!-- dt min-width(글자수)클래스 가이드 length2 | length3 | length4 | length5  --&gt;
+      &lt;dt class="length4">&lt;label for="select1" class="lb-inp">사용 유무&lt;/label>&lt;/dt>
+      &lt;dd>
+        &lt;select id="select1" class="inp-select">
+          &lt;option value="전체" selected>전체&lt;/option>
+          &lt;option value="Y">Y&lt;/option>
+          &lt;option value="N">N&lt;/option>
+        &lt;/select>
+      &lt;/dd>
+    &lt;/div>
+    &lt;div class="dl-form">
+      &lt;dt class="length4">&lt;label for="select2" class="lb-inp">관리모드&lt;/label>&lt;/dt>
+      &lt;dd>
+        &lt;select id="select2" class="inp-select">
+          &lt;option value="전체" selected>전체&lt;/option>
+          &lt;option value="프로필">프로필&lt;/option>
+          &lt;option value="디바이스">디바이스&lt;/option>
+          &lt;option value="불특정 허용">불특정 허용&lt;/option>
+        &lt;/select>
+      &lt;/dd>
+    &lt;/div>
+    &lt;div class="dl-form">
+      &lt;dt class="length4">&lt;label for="select3" class="lb-inp">정책&lt;/label>&lt;/dt>
+      &lt;dd>
+        &lt;select id="select3" class="inp-select">
+          &lt;option value="전체" selected>전체&lt;/option>
+          &lt;option value="정책리스트">등록된 정책 리스트01&lt;/option>
+          &lt;option value="정책리스트">등록된 정책 리스트02&lt;/option>
+        &lt;/select>
+      &lt;/dd>
+    &lt;/div>
+  &lt;/dl>
+  &lt;dl class="dl-formbox has-search">
+    &lt;dt class="length4">&lt;label for="select4" class="lb-inp">검색&lt;/label>&lt;/dt>
+    &lt;dd class="is-grow">
+      &lt;select id="select4" class="inp-select is-sm">
+        &lt;option value="전체" selected>전체&lt;/option>
+        &lt;option value="모델">모델&lt;/option>
+        &lt;option value="사용자">사용자&lt;/option>
+      &lt;/select>
+      &lt;div class="form-input">
+        &lt;label class="lb-inp">
+          &lt;span class="lb-title hidden">모델 또는 사용자&lt;/span>
+          &lt;input type="text" class="inp-base" name="" aria-label="모델 또는 사용자" placeholder="기기번호 또는 사용자 검색">
+        &lt;/label>
+      &lt;/div>
+      &lt;button type="button" class="btn is-primary is-h36">검색&lt;/button>
+    &lt;/dd>
+  &lt;/dl>
+&lt;/div></code>
+</pre>
+
+<!-- //search formbox -->
+    </main>
+      <!-- //content -->
+  </div>
+  <!-- //base-wrap -->
+
+  <!-- js library -->
+  <script src="../../resources/js/jquery/jquery.min.js"></script>
+  <script src="../../resources/js/lib/tui-date-picker.min.js"></script>
+  <script src="../../resources/js/lib/prism.js"></script>
+  <!-- js base -->
+  <script type="module" src="../../resources/js/common/ui.common.js"></script>
+
+  <!-- page script -->
+  <script>
+    // DatePicker
+    const today = new Date();
+    const startpicker = new tui.DatePicker('#startpicker-div1', {
+      date: today,
+      language: 'ko',
+      input: {
+        element: '#startpicker-inp1',
+        format: 'yyyy-MM-dd'
+      }
+    });
+    const endpicker = new tui.DatePicker('#endpicker-div1', {
+      date: today,
+      language: 'ko',
+      input: {
+        element: '#endpicker-inp1',
+        format: 'yyyy-MM-dd'
+      }
+    });
+
+    // UI 확인용 스크립트
+    document.querySelector('.btn-options').addEventListener('click', function (event) {
+      const target = event.target;
+      if (!target.classList.contains('btn')) return;
+
+      let startDate, endDate = today;
+      switch (target.textContent.trim()) {
+        case '전체':
+          break;
+        case '오늘':
+          startDate = endDate = today;
+          break;
+        case '1주일':
+          startDate = new Date(today.getFullYear(), today.getMonth(), today.getDate() - 7);
+          break;
+        case '1개월':
+          startDate = new Date(today.getFullYear(), today.getMonth() - 1, today.getDate());
+          break;
+        case '3개월':
+          startDate = new Date(today.getFullYear(), today.getMonth() - 3, today.getDate());
+          break;
+        case '6개월':
+          startDate = new Date(today.getFullYear(), today.getMonth() - 6, today.getDate());
+          break;
+      }
+
+      startpicker.setDate(startDate);
+      endpicker.setDate(endDate);
+    });
+  </script>
+  <!-- //page script -->
+</body>
+</html>

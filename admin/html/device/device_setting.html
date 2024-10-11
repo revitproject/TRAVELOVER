@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AXA MDM</title>
+  <link rel="shortcut icon" href="../../resources/images/common/favicon.ico">
+  <!-- css library -->
+  <link rel="stylesheet" href="../../resources/css/lib/tui-date-picker.min.css">
+  <link rel="stylesheet" href="../../resources/css/lib/swiper-bundle.min.css">
+  <!-- css base -->
+  <link rel="stylesheet" href="../../resources/css/base.css">
+</head>
+<body data-route="device">
+  <!-- base-wrap -->
+  <div class="base-wrap device">
+    <!-- base-header -->
+    <header class="base-header"></header>
+    <!-- //base-header -->
+
+    <!-- base-aside -->
+    <aside class="base-aside"></aside>
+    <!-- //base-aside -->
+
+    <!-- base-content -->
+    <main class="base-content">
+      <div class="content-inner">
+        <h1 class="content-title">기기</h1>
+        <a href="#deviceSetting" class="btn is-grays-1" data-modal="open">open</a>
+      </div>
+    </main>
+    <!-- //base-content -->
+
+    <!-- 팝업 영역 -->
+    <!-- 기기 원격제어 설정 -->
+    <div id="deviceSetting" class="modal is-show">
+      <div class="modal-inner" style="width: 476px;">
+        <div class="modal-header">
+          <button class="modal-close" data-modal="close"><span class="hidden">닫기</span></button>
+          <strong class="modal-title">기기 원격제어 설정</strong>
+        </div>
+        <div class="modal-body">
+          <div class="modal-content setting">
+            <div class="device-info">
+              <div class="content-icon"></div>
+              <div class="d-flex f-column">
+                <dl class="dl-formbox">
+                  <dt>기기명</dt>
+                  <dd>3708EFA7AF510E9</dd>
+                </dl>
+                <dl class="dl-formbox">
+                  <dt>사용자</dt>
+                  <dd>홍길동/revit@revit.com</dd>
+                </dl>
+              </div>
+            </div>
+
+            <!-- swiper -->
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide content-card">
+                  <p class="state-text">디바이스 잠금</p>
+                  <button type="button" id="alertDevice1" class="btn is-primary is-h48 is-full">실행</button>
+                </div>
+                <div class="swiper-slide content-card">
+                  <p class="state-text">암호 리셋</p>
+                  <button type="button" id="alertDevice2" class="btn is-primary is-h48 is-full">실행</button>
+                </div>
+                <div class="swiper-slide content-card">
+                  <p class="state-text">재부팅</p>
+                  <button type="button" id="alertDevice3" class="btn is-primary is-h48 is-full">실행</button>
+                </div>
+                <div class="swiper-slide content-card">
+                  <p class="state-text">앱 데이터 삭제</p>
+                  <button type="button" id="alertDevice4" class="btn is-primary is-h48 is-full">실행</button>
+                </div>
+                <div class="swiper-slide content-card">
+                  <p class="state-text">분실 등록</p>
+                  <div class="d-flex f-column">
+                    <div class="form-input">
+                      <label class="lb-inp is-focused">
+                        <span class="lb-title hidden">분실 메시지</span>
+                        <input type="text" class="inp-base is-h48" name="" aria-label="분실 메시지" placeholder="분실 메시지 입력">
+                      </label>
+                    </div>
+                    <button type="button" id="alertDevice5" class="btn is-primary is-h48 is-full mt-10">실행</button>
+                  </div>
+                </div>
+                <div class="swiper-slide content-card">
+                  <p class="state-text">분실 해제</p>
+                  <button type="button" id="alertDevice6" class="btn is-primary is-h48 is-full">실행</button>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+              <!-- <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //팝업 영역 -->
+  </div>
+  <!-- //base-wrap -->
+  <!-- js library -->
+  <script src="../../resources/js/jquery/jquery.min.js"></script>
+  <script src="../../resources/js/lib/swiper-bundle.min.js"></script>
+  <script src="../../resources/js/lib/tui-date-picker.min.js"></script>
+  <!-- js base -->
+  <script type="module" src="../../resources/js/common/ui.common.js"></script>
+
+  <!--swiper -->
+  <script>
+    const swiper = new Swiper(".swiper", {
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      // navigation: {
+      //   nextEl: ".swiper-button-next",
+      //   prevEl: ".swiper-button-prev",
+      // },
+    });
+  </script>
+
+  <!-- alert/confirm -->
+  <script>
+    const alertBtns = document.querySelectorAll('#alertDevice1, #alertDevice2, #alertDevice3, #alertDevice4, #alertDevice5, #alertDevice6');
+
+    alertBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        window.modalManager.confirm(
+          '기기 원격제어 설정을 실행 하시겠습니까?',  // 타이틀
+          null,                                    // 메시지
+          () => { window.modalManager.closeCurrentModal() },  // 취소 버튼 콜백
+          () => { 
+            window.modalManager.alert(
+              '성공적으로 원격제어 설정이 실행 되었습니다.',
+              null,
+              () => { window.modalManager.closeAllModals(); }
+            );
+          },       // 확인 버튼 콜백
+          '취소',  // 취소 버튼 텍스트
+          '확인'   // 확인 버튼 텍스트
+        );
+      });
+    })
+    
+  </script>
+</body>
+</html>

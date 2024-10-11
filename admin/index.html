@@ -1,0 +1,61 @@
+<!doctype html>
+<html class="no-js" lang="ko">
+
+<head>
+  <title>TraveLover Admin FILE LIST</title>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,requiresActiveX=true">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="./resources/js/jquery/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+  <link rel="stylesheet" href="./guide/guide.css">
+</head>
+
+<body>
+  <div class="_GUIDE" id="guide_list" style="display:none">
+    <header class="_GUIDE__head">
+      <h1 class="_GUIDE__title"><a href="#"><strong>{{ config.siteName }}</strong></a></h1>
+      <div class="legend">
+        <ul class="legend-list js-legend_list">
+          <li class="state_new" @click="filterState('state_new')"><span>NEW</span></li>
+          <li class="state_ing" @click="filterState('state_ing')"><span>진행</span></li>
+          <li class="state_edit" @click="filterState('state_edit')"><span>수정</span></li>
+          <li class="state_del" @click="filterState('state_del')"><span>삭제</span></li>
+        </ul>
+      </div>
+    </header>
+    <main class="_GUIDE__container _GUIDE__container--filelist">
+      <h2 class="_GUIDE__sr-only">FILE LIST</h2>
+      <div class="_GUIDE__list" id="list-body">
+        <table>
+          <thead v-if="Object.keys(t_head).length">
+            <tr>
+              <th v-for="(value, key) in t_head" v-if="value" :key="key">
+                {{ key.toUpperCase() }}
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="item in filteredList" :key="item.url" :class="li_option(item)">
+              <td v-for="(value, key) in t_head" v-if="value" :key="key">
+                {{ item[key] }}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+
+  <script src="./guide/app.js"></script>
+  <script src="./guide/setting.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('#guide_list').show();
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,243 @@
+@charset "UTF-8";
+
+.tbl-base {
+  width: 100%;
+  table-layout: fixed;
+  margin-top: 1rem;
+  border-top: .2rem solid var(--black);
+  border-bottom: .1rem solid var(--grays-1);
+}
+.tbl-base + .tbl-base {
+  margin-top: 1.2rem;
+}
+.tbl-base > thead > tr > th {
+  height: 5.6rem;
+  padding: 2rem 1.6rem;
+  color: var(--grays-9);
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.4rem;
+  text-align: center;
+  border-bottom: .1rem solid var(--grays-0);
+  background-color: var(--baseBg);
+}
+.tbl-base > thead > tr > th:last-child {
+  border-right: 0;
+}
+.tbl-base > tbody > tr > th,
+.tbl-base > tbody > tr > td,
+.tbl-base > tfoot > tr > th,
+.tbl-base > tfoot > tr > td {
+  height: 5rem;
+  padding: 1.2rem 1.6rem;
+  color: var(--grays-9);
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.6rem;
+  text-align: center;
+}
+.tbl-base > tbody > tr > th:last-child,
+.tbl-base > tbody > tr > td:last-child,
+.tbl-base > tfoot > tr > th:last-child,
+.tbl-base > tfoot > tr > td:last-child {
+  border-right: 0;
+}
+.tbl-base > thead > tr,
+.tbl-base > tbody > tr {
+  border-bottom: .1rem solid var(--grays-0);
+}
+.tbl-base > tfoot > tr > th,
+.tbl-base > tfoot > tr > td {
+  font-weight: 500;
+  background-color: var(--baseBg);
+}
+.tbl-base > tfoot > tr > td {
+  text-align: right;
+}
+
+.tbl-base > tbody > tr > th,
+.tbl-base > tbody > tr > td {
+  background: #fff;
+}
+.tbl-base > tbody > tr > td {
+  color: var(--grays-9);
+}
+.tbl-base > tbody > tr > th.is-bg,
+.tbl-base > tbody > tr > td.is-bg {
+  background: var(--grays-m);
+}
+.tbl-base > tbody > tr > th:first-child,
+.tbl-base > tbody > tr > td:first-child {
+  border-left: 0;
+}
+.tbl-base > tbody > tr > th.is-bg {
+  color: var(--grays-9);
+  font-weight: 600;
+  background: var(--grays-m);
+  border-right: .1rem solid var(--grays-0);
+}
+.tbl-base > colgroup + tbody > tr > th {
+  padding: .6rem 1.6rem;
+  color: var(--grays-9);
+  font-weight: 600;
+  border-right: .1rem solid var(--grays-0);
+}
+.tbl-base > colgroup + tbody > tr > td {
+  padding: .6rem 1.6rem;
+}
+.tbl-base > colgroup + tbody > tr > th {
+  background-color: var(--baseBg);
+  border-left: .1rem solid var(--grays-0);
+}
+.tbl-base > tbody > tr > th.align-center .form-checkbox,
+.tbl-base > tbody > tr > td.align-center .form-checkbox {
+  justify-content: center;
+}
+.tbl-base .no-result {
+  position: relative;
+  width: 100%;
+  height: 54rem;
+  padding-top: 7.2rem;
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-align: center;
+  color: var(--grays-4);
+  background-color: var(--baseBg);
+}
+.tbl-base .no-result::before {
+  content: '';
+  position: absolute;
+  top: calc(50% - 1.2rem);
+  left: 50%;
+  display: block;
+  width: 4.8rem;
+  height: 4.8rem;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' fill='none'%3E%3Cpath stroke='%237F7F83' stroke-linejoin='round' stroke-width='1.5' d='M24 42c9.941 0 18-8.059 18-18S33.941 6 24 6 6 14.059 6 24s8.059 18 18 18Z'/%3E%3Cpath fill='%237F7F83' stroke='%237F7F83' d='M22.5 32c0-.824.676-1.5 1.5-1.5s1.5.676 1.5 1.5-.676 1.5-1.5 1.5-1.5-.676-1.5-1.5Z'/%3E%3Cpath stroke='%237F7F83' stroke-linecap='round' stroke-width='1.5' d='M24 16v8'/%3E%3C/svg%3E") no-repeat 50% 100% / 100%;
+  transform: translate(-50%, -50%);
+}
+.tbl-title {
+	margin-bottom: 1rem;
+	color: var(--black);
+	font-size: 1.4rem;
+	font-weight: 700;
+  line-height: 2.2rem;
+}
+.tbl-base > thead > tr > th.bold,
+.tbl-base > thead > tr > td.bold,
+.tbl-base > tbody > tr > th.bold,
+.tbl-base > tbody > tr > td.bold,
+.module-top .tbl-base > tbody > tr > th.bold,
+.module-top .tbl-base > tbody > tr > td.bold {
+  font-weight: 700;
+}
+.tbl-base .btn,
+.tbl-base .inp-base,
+.tbl-base .inp-select,
+.tbl-base .wrap-datepicker {
+  min-width: initial;
+}
+
+/* .table has-left */
+.tbl-base.has-left > thead > tr > th,
+.tbl-base.has-left > tbody > tr > th,
+.tbl-base.has-left > tbody > tr > td {
+  text-align: left;
+}
+/* .table has-data */
+.tbl-base.has-data > tbody > tr > td {
+  text-align: left;
+}
+
+/* tbl-head */
+.tbl-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  min-height: 3.2rem;
+  margin-bottom: 2rem;
+}
+.tbl-head.is-end {
+  justify-content: flex-end;
+}
+.tbl-head .head-option {
+  display: inline-flex;
+  align-items: center;
+  gap: .8rem;
+}
+.tbl-head .count-text {
+  color: var(--black);
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.tbl-head .count-text .count-num {
+  font-weight: 800;
+}
+.tbl-head .inp-select {
+  min-width: 8rem;
+  background-position: calc(100%  - 1.2rem) 50%;
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.3332 6.00016L7.99984 9.3335L4.6665 6.00016' stroke='%23494949' stroke-width='1.2' stroke-linecap='square' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+}
+.tbl-btn-group {
+  display: flex;
+  align-items: center;
+  margin-top: 2.4rem;
+  gap: 1rem;
+}
+.tbl-btn-group.is-right {
+  justify-content: flex-end;
+}
+.tbl-btn-group.is-center {
+  justify-content: center;
+}
+
+/* tbl-scroll */
+.tbl-base.has-scrollbar {
+  table-layout: auto;
+  margin-bottom: .6rem;
+}
+.scroll-content {
+  overflow: auto;
+}
+/* nodata */
+.tbl-nodata, 
+.tbl-nodata tbody tr {
+  border-bottom: 0;
+}
+/* rowspan이 있을 경우 border-left 값 추가 */
+.tbl-base tr > th.is-border {
+  border-left: .1rem solid var(--grays-3);
+} 
+
+/* dl type */
+.tbl-dl {
+  display: inline-flex;
+  align-items: center;
+  line-height: 2rem;
+}
+.tbl-dl dt {
+  padding-right: 1.2rem;
+  color: var(--grays-9); 
+}
+.tbl-dl dd {
+  color: var(--black);
+  font-weight: 500;
+}
+.tbl-dl + .tbl-base {
+  margin-top: 1.4rem;
+}
+.dl-formbox + .tbl-base {
+  margin-top: 2.4rem;
+}
+.tbl-dl + .tbl-dl {
+  margin-left: 2.8rem;
+  padding-left: 2.8rem;
+  border-left: .1rem solid #D9D9D9;
+  line-height: 2.2rem;
+}
+
+/* module-top */
+.module-top .tbl-base > tbody > tr > th,
+.module-top .tbl-base > tbody > tr > td {
+  height: 5.6rem;
+  padding: 1.2rem 1.6rem;
+}

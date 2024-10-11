@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TRAVELOVER GUIDE</title>
+  <link rel="shortcut icon" href="../../resources/images/common/favicon.ico">
+  <!-- css library -->
+  <link rel="stylesheet" href="../../resources/css/lib/tui-date-picker.min.css">
+  <link rel="stylesheet" href="../../resources/css/lib/prism.css">
+  <!-- css base -->
+  <link rel="stylesheet" href="../../resources/css/base.css">
+</head>
+<body data-route="buttons"> 
+  <!-- base-wrap -->
+  <div class="base-wrap component">
+    <!-- base-header -->
+    <header class="base-header"></header>
+    <!-- //base-header -->
+
+    <!-- base-aside -->
+    <aside class="base-aside guide"></aside>
+    <!-- //base-aside -->
+
+    <!-- base-content -->
+    <main class="base-content">
+      <h1 class="component-h1">Buttons</h1>
+      <h2 class="component-title">Type</h2>
+      <div class="wrap-btn">
+        <button type="button" class="btn is-primary">버튼명</button>
+        <button type="button" class="btn is-secondary-1">버튼명</button>
+        <button type="button" class="btn is-outline-1">버튼명</button>
+        <button type="button" class="btn is-outline-2">버튼명</button>
+        <button type="button" class="btn is-primary" disabled>버튼명</button> <!-- 비활성화 -->
+        <button type="button" class="btn is-outline-1" disabled>버튼명</button> <!-- 비활성화 -->
+      </div>
+
+<pre>
+<code class="language-Markup">&lt;button type="button" class="btn is-primary">버튼명&lt;/button>
+&lt;button type="button" class="btn is-secondary-1">버튼명&lt;/button>
+&lt;button type="button" class="btn is-outline-1">버튼명&lt;/button>
+&lt;button type="button" class="btn is-outline-2">버튼명&lt;/button>
+&lt;button type="button" class="btn is-primary" disabled>버튼명&lt;/button> &lt;!-- 비활성화 --&gt;
+&lt;button type="button" class="btn is-outline-1" disabled>버튼명&lt;/button> &lt;!-- 비활성화 --&gt;</code>
+</pre>
+
+      <h2 class="component-title">Size</h2>
+      <div class="wrap-btn">
+        <button type="button" class="btn is-primary is-lg">Large</button>
+        <button type="button" class="btn is-outline-1 is-lg">Large</button>
+        <button type="button" class="btn is-primary is-md">Medium</button>
+        <button type="button" class="btn is-outline-1 is-md">Medium</button>
+        <button type="button" class="btn is-primary is-sm">Small</button>
+        <button type="button" class="btn is-outline-1 is-sm">Small</button>
+        <button type="button" class="btn is-outline-2 is-sm">Small</button>
+        <button type="button" class="btn is-outline-1 is-xs">상세보기</button>
+        <button type="button" class="btn is-outline-2 is-xs">계약관리</button>
+      </div>
+<pre>
+<code class="language-Markup">&lt;button type="button" class="btn is-primary is-lg">Large&lt;/button>
+&lt;button type="button" class="btn is-primary is-md">Medium&lt;/button>
+&lt;button type="button" class="btn is-primary is-sm">Small&lt;/button>
+&lt;button type="button" class="btn is-primary is-xs">Extra Small&lt;/button></code>
+</pre>
+
+      <h2 class="component-title">Icon</h2>
+      <div class="wrap-btn">
+        <button type="button" class="btn-ico is-delete">삭제</button>
+        <button type="button" class="btn-ico is-modify">수정모드로 전환</button>
+        <button type="button" class="btn-ico is-reload">다시 업로드</button>
+        <button type="button" class="btn-ico is-view">미리보기</button>
+        <button type="button" class="btn-ico is-pdf">PDF 저장</button>
+        <button type="button" class="btn-ico is-print">인쇄하기</button>
+        <button type="button" class="btn-ico is-end">종료</button>
+      </div>
+<pre>
+<code class="language-Markup">&lt;button type="button" class="btn-ico is-delete">삭제&lt;/button>
+&lt;button type="button" class="btn-ico is-modify">수정모드로 전환&lt;/button>
+&lt;button type="button" class="btn-ico is-reload">다시 업로드&lt;/button>
+&lt;button type="button" class="btn-ico is-view">미리보기&lt;/button>
+&lt;button type="button" class="btn-ico is-pdf">PDF 저장&lt;/button>
+&lt;button type="button" class="btn-ico is-print">인쇄하기&lt;/button>
+&lt;button type="button" class="btn-ico is-end">종료&lt;/button></code>
+</pre>
+
+  <h2 class="component-title">Text</h2>
+  <div class="wrap-btn">
+    <button type="button" class="btn is-text">문의하기</button>
+    <button type="button" class="btn is-text" disabled>문의하기</button>
+  </div>
+<pre>
+<code class="language-Markup">&lt;button type="button" class="btn is-text">문의하기&lt;/button>
+&lt;button type="button" class="btn is-text" disabled>문의하기&lt;/button></code>
+</pre>
+
+<h2 class="component-title">Rounded</h2>
+<div class="wrap-btn">
+  <button type="button" class="btn is-round">위 사항을 모두 읽고 확인하였음을 동의 합니다.</button>
+  <button type="button" class="btn is-round" disabled>위 사항을 모두 읽고 확인하였음을 동의 합니다.</button>
+</div>
+<pre>
+<code class="language-Markup">&lt;button type="button" class="btn is-round">위 사항을 모두 읽고 확인하였음을 동의 합니다.&lt;/button>
+&lt;button type="button" class="btn is-round" disabled>위 사항을 모두 읽고 확인하였음을 동의 합니다.&lt;/button></code>
+</pre>
+    </main>
+    <!-- //base-content -->
+  </div>
+  <!-- //base-wrap -->
+
+  <!-- js library -->
+  <script src="../../resources/js/jquery/jquery.min.js"></script>
+  <script src="../../resources/js/lib/tui-date-picker.min.js"></script>
+  <script src="../../resources/js/lib/prism.js"></script>
+  <!-- js base -->
+  <script type="module" src="../../resources/js/common/ui.common.js"></script>
+</body>
+</html>

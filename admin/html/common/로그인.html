@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AXA MDM</title>
+  <link rel="shortcut icon" href="../../resources/images/common/favicon.ico">
+  <!-- css base -->
+  <link rel="stylesheet" href="../../resources/css/base.css">
+</head>
+<body>
+  <!-- base-wrap -->
+  <div class="base-wrap login">
+    <!-- base-content -->
+    <main class="base-content">
+      <section>
+        <div class="login-form">
+          <div class="login-head">
+            <h1 class="wrap-logo">
+              <img src="../../resources/images/common/logo.svg" alt="트래블로버">
+              <span class="login-txt">트래블로버 관리자</span>
+            </h1>
+          </div>
+
+          <div class="login-body">
+            <h2 class="login-tit">로그인</h2>
+            <form action="" method="post">
+              <div class="form-input is-column">
+                <label class="lb-inp">
+                  <span class="lb-title">이메일</span>
+                  <input type="email" class="inp-base" name="useremail" aria-label="메일 주소 입력" placeholder="메일 정보를 입력해 주세요.">
+                </label>
+              </div>
+              <div class="form-input is-column">
+                <label class="lb-inp">
+                  <span class="lb-title">비밀번호</span>
+                  <input type="password" id="userPassword" class="inp-base" name="password" maxlength="" aria-label="비밀번호 입력" placeholder="비밀번호를 입력해주세요.">
+                </label>
+              </div>
+              <div class="wrap-btn">
+                <button type="button" id="btnLogin" class="btn is-primary is-h56">LOGIN</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- //base-content -->
+  </div>
+  <!-- //base-wrap -->
+
+  <!-- js library -->
+  <script src="../../resources/js/jquery/jquery.min.js"></script>
+  <!-- js common -->
+  <script type="module" src="../../resources/js/common/ui.common.js"></script>
+
+  <!-- alert/confirm -->
+  <script>
+    document.querySelector('#btnLogin').addEventListener('click', function() {
+      window.modalManager.alert(
+        '메일 정보를 입력해 주세요.',  // 타이틀
+        null,                        // 메시지
+        () => { window.modalManager.hideDialog() }  // 취소 버튼 콜백
+      );
+    });
+  </script>
+</body>
+</html>
