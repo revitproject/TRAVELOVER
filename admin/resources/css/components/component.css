@@ -1,63 +1,82 @@
 @charset "UTF-8";
 
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
 /* worklist */
-.worklist::before {
-  display: none;
+.worklist {
+  overflow-y: auto;
+  padding: 2rem;
+  box-sizing: border-box;
+  color: var(--grays-9);
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
-.worklist .base-content {
-  position: static;
-  width: 100%;
-  padding: 0 2.4rem 3rem;
-  background: #fff;
-}
-.worklist .content-title {
-  margin: 2rem 0 1rem;
-  font-size: 2.2rem;
-  font-weight: 600;
+.worklist h2 {
+  margin-top: 3rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1;
 }
 .worklist .tbl-base > thead > tr,
 .worklist .tbl-base > tbody > tr {
-  border-bottom: .1rem solid var(--grays-8);
-}
-.worklist .tbl-base > tbody > tr > th,
-.worklist .tbl-base > tbody > tr > td,
-.worklist .tbl-base > tbody > tr > td > a {
-  color: var(--black);
-  font-size: 1.4rem;
-  border-right: 0;
+  border-bottom: .1rem solid var(--grays-1);
 }
 .worklist .tbl-base > thead > tr > th {
-  font-size: 1.4rem;
-  font-weight: 500;
-  background-color: var(--grays-m);
-  border-right: .1rem solid var(--grays-9);
-}
-.worklist .tbl-base > thead > tr > th:last-child {
-  border-right: 0;
-}
-.worklist .tbl-base>tbody>tr>td {
+  height: 4.6rem;
+  padding: 1.6rem 1.6rem;
+  font-weight: 400;
   text-align: left;
-  border-right: 0;
 }
-.worklist .tbl-base > tbody > tr > td.date,
-.worklist .tbl-base > tbody > tr > td.status {
-  text-align: center;
+.worklist .tbl-base > tbody > tr > th,
+.worklist .tbl-base > tbody > tr > td {
+  height: 4.2rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  text-align: left;
 }
-.worklist .tbl-base .status.ing {
-  color: #f16122;
+.worklist .tbl-base a {
+  color: var(--grays-9);
+  font-weight: 400;
 }
-.worklist .tbl-base .status.modify {
-  color: #04AA6D;
+.worklist .col-no { 
+  width: 7rem; 
+  text-align: center !important; 
 }
-.worklist .tbl-base .status.complete {
-  color: #007CEF;
+.worklist .col-date {
+  width: 15rem; 
 }
-.worklist .tbl-base .status.delete {
-  color: var(--grays-7);
+.worklist .legend {
+  display: flex;
+  justify-content: flex-end;
 }
-.worklist .tbl-base > tbody > tr:hover th,
-.worklist .tbl-base > tbody > tr:hover td {
-  background-color: #ECEEFF;
+.worklist .legend ul {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+}
+.worklist .legend li {
+  display: inline-block;
+  padding: .2rem 1rem;
+  background: var(--grays-0);
+  border: .1rem solid var(--grays-1);
+  border-radius: .4rem;
+}
+.worklist .legend li button {
+  color: var(--grays-8);
+  font-size: 1.3rem;
+}
+.worklist .state-new td {
+  background-color: #fff2e2;
+}
+.worklist .state-ing td {
+  background-color: #f0fffa;
+}
+.worklist .state-edit td {
+  background-color: #d2e7ff;
+}
+.worklist .state-del td {
+  background-color: #e6e6e6;
+  color: #ff9999;
+  text-decoration: line-through;
 }
 
 /* component */

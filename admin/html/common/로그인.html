@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AXA MDM</title>
+  <title>TRAVELOVER ADMIN</title>
   <link rel="shortcut icon" href="../../resources/images/common/favicon.ico">
   <!-- css base -->
   <link rel="stylesheet" href="../../resources/css/base.css">
@@ -23,22 +23,22 @@
           </div>
 
           <div class="login-body">
-            <h2 class="login-tit">로그인</h2>
+            <h2 class="login-tit">Log In</h2>
             <form action="" method="post">
               <div class="form-input is-column">
-                <label class="lb-inp">
+                <label id="userId" class="lb-inp">
                   <span class="lb-title">이메일</span>
-                  <input type="email" class="inp-base" name="useremail" aria-label="메일 주소 입력" placeholder="메일 정보를 입력해 주세요.">
+                  <input type="email" class="inp-base" name="userId" placeholder="아이디 (4자리 이상)">
                 </label>
               </div>
               <div class="form-input is-column">
-                <label class="lb-inp">
+                <label id="userPassword" class="lb-inp">
                   <span class="lb-title">비밀번호</span>
-                  <input type="password" id="userPassword" class="inp-base" name="password" maxlength="" aria-label="비밀번호 입력" placeholder="비밀번호를 입력해주세요.">
+                  <input type="password" class="inp-base" name="userPassword" minlength="5" maxlength="" placeholder="비밀번호 (5자리 이상)">
                 </label>
               </div>
               <div class="wrap-btn">
-                <button type="button" id="btnLogin" class="btn is-primary is-h56">LOGIN</button>
+                <button type="button" id="btnLogin" class="btn is-primary is-md">LOGIN</button>
               </div>
             </form>
           </div>
@@ -50,7 +50,7 @@
   <!-- //base-wrap -->
 
   <!-- js library -->
-  <script src="../../resources/js/jquery/jquery.min.js"></script>
+  <script src="../../resources/js/lib/jquery.min.js"></script>
   <!-- js common -->
   <script type="module" src="../../resources/js/common/ui.common.js"></script>
 

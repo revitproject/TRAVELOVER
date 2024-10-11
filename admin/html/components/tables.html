@@ -110,82 +110,95 @@
   &lt;/tbody>
 &lt;/table></code>
 </pre>
-    <h2 class="component-title">Default</h2>
+    <h2 class="component-title">Default - left</h2>
     <table class="tbl-base has-left">
       <colgroup>
-        <col style="width: 20rem;">
+        <col style="width: 20%;">
         <col>
-        <col style="width: 20rem;">
+        <col style="width: 20%;">
         <col>
       </colgroup>
       <tbody>
         <tr>
-          <th>홈페이지</th>
-          <td>data</td>
-          <th>아이디</th>
-          <td>data</td>
+          <th>원사정보</th>
+          <td>
+            <select class="inp-select">
+              <option value="선택">선택</option>
+              <option value="select2">셀렉트2</option>
+              <option value="select3">셀렉트3</option>
+            </select>
+          </td>
+          <th>원사코드</th>
+          <td>
+            <label class="lb-inp">
+              <span class="lb-title hidden">원사코드</span>
+              <input type="text" class="inp-base" placeholder="">
+            </label>
+          </td>
         </tr>
         <tr>
-          <th>비밀번호</th>
-          <td>data</td>
-          <th>인증번호</th>
-          <td>data</td>
+          <th>국문원사명</th>
+          <td>
+            <label class="lb-inp">
+              <span class="lb-title hidden">국문원사명</span>
+              <input type="text" class="inp-base" placeholder="">
+            </label>
+          </td>
+          <th>보증보험기간</th>
+          <td>
+            <div class="datepicker">
+              <div class="tui-datepicker-input">
+                <input type="text" id="startpicker-inp1" aria-label="Date-Time">
+                <div id="startpicker-div1" class="datepicker-div"></div>
+              </div>
+            </div>
+          </td>
         </tr>
-       
       </tbody>
     </table>
 <pre>
 <code class="language-Markup">&lt;table class="tbl-base has-left">
   &lt;colgroup>
-    &lt;col style="width: 20rem;">
+    &lt;col style="width: 20%;">
     &lt;col>
-    &lt;col style="width: 20rem;">
-    &lt;col>
-    &lt;col style="width: 20rem;">
-    &lt;col>
-    &lt;col style="width: 20rem;">
+    &lt;col style="width: 20%;">
     &lt;col>
   &lt;/colgroup>
   &lt;tbody>
     &lt;tr>
-      &lt;th>이름&lt;/th>
-      &lt;td>김해피&lt;/td>
-      &lt;th>아이디&lt;/th>
-      &lt;td>endorhappy001&lt;/td>
-      &lt;th>생년월일&lt;/th>
-      &lt;td>2024-10-24&lt;/td>
-      &lt;th>성별&lt;/th>
-      &lt;td>남&lt;/td>
+      &lt;th>원사정보&lt;/th>
+      &lt;td>
+        &lt;select class="inp-select">
+          &lt;option value="선택">선택&lt;/option>
+          &lt;option value="select2">셀렉트2&lt;/option>
+          &lt;option value="select3">셀렉트3&lt;/option>
+        &lt;/select>
+      &lt;/td>
+      &lt;th>원사코드&lt;/th>
+      &lt;td>
+        &lt;label class="lb-inp">
+          &lt;span class="lb-title hidden">원사코드&lt;/span>
+          &lt;input type="text" class="inp-base" placeholder="">
+        &lt;/label>
+      &lt;/td>
     &lt;/tr>
     &lt;tr>
-      &lt;th>휴대폰번호&lt;/th>
-      &lt;td>010-7777-1111&lt;/td>
-      &lt;th>이메일&lt;/th>
-      &lt;td>happymong@happy.com&lt;/td>
-      &lt;th>회원유형&lt;/th>
-      &lt;td>일반회원&lt;/td>
-      &lt;th>연동정보/전환해머포인트&lt;/th>
-      &lt;td>해피머니/500(톤)&lt;/td>
-    &lt;/tr>
-    &lt;tr>
-      &lt;th>등급&lt;/th>
-      &lt;td>소울스타&lt;/td>
-      &lt;th>레벨&lt;/th>
-      &lt;td>02&lt;/td>
-      &lt;th>닉네임&lt;/th>
-      &lt;td>진짜해피몽&lt;/td>
-      &lt;th>초대코드&lt;/th>
-      &lt;td>ABC122&lt;/td>
-    &lt;/tr>
-    &lt;tr>
-      &lt;th>엔돌캐시&lt;/th>
-      &lt;td>1,000&lt;/td>
-      &lt;th>골드해머&lt;/th>
-      &lt;td>50,000&lt;/td>
-      &lt;th>최초가입일&lt;/th>
-      &lt;td>2024-02-26 15:00&lt;/td>
-      &lt;th>일반회원 전환일&lt;/th>
-      &lt;td>-&lt;/td>
+      &lt;th>국문원사명&lt;/th>
+      &lt;td>
+        &lt;label class="lb-inp">
+          &lt;span class="lb-title hidden">국문원사명&lt;/span>
+          &lt;input type="text" class="inp-base" placeholder="">
+        &lt;/label>
+      &lt;/td>
+      &lt;th>보증보험기간&lt;/th>
+      &lt;td>
+        &lt;div class="datepicker">
+          &lt;div class="tui-datepicker-input">
+            &lt;input type="text" id="startpicker-inp1" aria-label="Date-Time">
+            &lt;div id="startpicker-div1" class="datepicker-div">&lt;/div>
+          &lt;/div>
+        &lt;/div>
+      &lt;/td>
     &lt;/tr>
   &lt;/tbody>
 &lt;/table></code>
@@ -253,7 +266,7 @@
   <!-- //base-wrap -->
    
   <!-- js library -->
-  <script src="../../resources/js/jquery/jquery.min.js"></script>
+  <script src="../../resources/js/lib/jquery.min.js"></script>
   <script src="../../resources/js/lib/tui-date-picker.min.js"></script>
   <script src="../../resources/js/lib/prism.js"></script>
   <!-- js base -->

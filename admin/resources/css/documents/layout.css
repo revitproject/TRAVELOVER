@@ -441,11 +441,10 @@ body {
 	line-height: 4.2rem;
 }
 .login-form .login-body {
-	width: 50rem;
-	padding: 8rem 5rem;
+	width: 48rem;
+	padding: 4rem;
 	border-radius: 2rem;
-	background-color: #fff;
-	box-shadow: 2rem 3.2rem 3.6rem -1rem rgba(35, 48, 59, 0.1);
+	background-color: var(--white);
 }
 .login-form .login-body .login-tit {
 	font-size: 2.4rem;

@@ -1,60 +1,123 @@
-<!doctype html>
-<html class="no-js" lang="ko">
-
+<!DOCTYPE html>
+<html lang="ko">
 <head>
-  <title>TraveLover Admin FILE LIST</title>
-  <meta charset="utf-8">
-  <meta name="robots" content="noindex">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,requiresActiveX=true">
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="./resources/js/jquery/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
-  <link rel="stylesheet" href="./guide/guide.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TRAVELOVER ADMIN</title>
+  <link rel="stylesheet" href="./resources/css/base.css">
 </head>
 
-<body>
-  <div class="_GUIDE" id="guide_list" style="display:none">
-    <header class="_GUIDE__head">
-      <h1 class="_GUIDE__title"><a href="#"><strong>{{ config.siteName }}</strong></a></h1>
+<body class="worklist">
+  <div class="wrap-guide">
+    <header class="guide-head">
+      <h1 class="guide-title"><a href="#none"><strong>TraveLover Admin</strong></a></h1>
       <div class="legend">
-        <ul class="legend-list js-legend_list">
-          <li class="state_new" @click="filterState('state_new')"><span>NEW</span></li>
-          <li class="state_ing" @click="filterState('state_ing')"><span>진행</span></li>
-          <li class="state_edit" @click="filterState('state_edit')"><span>수정</span></li>
-          <li class="state_del" @click="filterState('state_del')"><span>삭제</span></li>
+        <ul class="legend-list">
+          <li class="state_new"><button type="button" onclick="filterState('new')">NEW</button></li>
+          <li class="state_ing"><button type="button" onclick="filterState('ing')">진행</button></li>
+          <li class="state_edit"><button type="button" onclick="filterState('edit')">수정</button></li>
+          <li class="state_del"><button type="button" onclick="filterState('del')">삭제</button></li>
         </ul>
       </div>
     </header>
-    <main class="_GUIDE__container _GUIDE__container--filelist">
-      <h2 class="_GUIDE__sr-only">FILE LIST</h2>
-      <div class="_GUIDE__list" id="list-body">
-        <table>
-          <thead v-if="Object.keys(t_head).length">
-            <tr>
-              <th v-for="(value, key) in t_head" v-if="value" :key="key">
-                {{ key.toUpperCase() }}
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="item in filteredList" :key="item.url" :class="li_option(item)">
-              <td v-for="(value, key) in t_head" v-if="value" :key="key">
-                {{ item[key] }}
-              </td>
-            </tr>
-          </tbody>
+    <main class="guide-main">
+      <div id="guide-list" class="guide-list">
+        <table class="tbl-base">
+          <thead id="table-head"></thead>
+          <tbody id="table-body"></tbody>
         </table>
       </div>
     </main>
   </div>
 
-  <script src="./guide/app.js"></script>
-  <script src="./guide/setting.js"></script>
   <script>
-    $(document).ready(function () {
-      $('#guide_list').show();
+    const config = { siteName: 'TraveLover Admin' };
+    const tHead = {
+      no: 1,
+      dep1: 1,
+      dep2: 1,
+      dep3: 1,
+      dep4: 1,
+      dep5: 1,
+      dep6: 1,
+      url: 1,
+      role: 0,
+      date: 1,
+      etc: 1,
+    };
+    let tBody = [];
+    let filter = '';
+
+    document.addEventListener('DOMContentLoaded', () => {
+      fetchData();
     });
+
+    function fetchData() {
+      fetch('./resources/file/pathlist.json?' + new Date().getTime()) // 경로 설정
+        .then(response => response.json())
+        .then(data => {
+          tBody = data;
+          renderTable();
+        })
+        .catch(error => console.error('Error fetching data:', error));
+    }
+
+    function renderTable() {
+      const tblHead = document.getElementById('table-head');
+      const tblBody = document.getElementById('table-body');
+
+      // 테이블 헤더 생성
+      tblHead.innerHTML = '';
+      const headerRow = document.createElement('tr');
+      for (const key in tHead) {
+        if (tHead[key]) {
+          const th = document.createElement('th');
+          th.className = 'col-' + key;
+          th.textContent = key.toLowerCase();
+          headerRow.appendChild(th);
+        }
+      }
+      tblHead.appendChild(headerRow);
+
+      // 테이블 본문 생성
+      tblBody.innerHTML = '';
+      const filteredList = tBody.filter(item => !filter || item.stateLine === filter);
+      filteredList.forEach((item, index) => {
+        const row = document.createElement('tr');
+        row.className = item.stateLine ? 'state-' + item.stateLine : '';
+
+        for (const key in tHead) {
+          if (tHead[key]) {
+            const td = document.createElement('td');
+            td.className = 'col-' + key;
+
+            if (key === 'no') {
+              td.textContent = index + 1;
+            } else if (key === 'url' && item[key]) {
+              const a = document.createElement('a');
+              a.href = item[key];
+              a.target = '_blank';
+              a.textContent = getFileName(item[key]);
+              td.appendChild(a);
+            } else {
+              td.textContent = item[key] || '';
+            }
+            row.appendChild(td);
+          }
+        }
+        tblBody.appendChild(row);
+      });
+    }
+
+    function filterState(state) {
+      filter = state;
+      renderTable();
+    }
+
+    function getFileName(url) {
+      const parts = url.split('/');
+      return parts[parts.length - 1];
+    }
   </script>
 </body>
 
